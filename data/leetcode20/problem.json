@@ -1,0 +1,10 @@
+{
+    "time_limit": 1000.0,
+    "memory_limit": [
+        2560000,
+        12800,
+        128
+    ],
+    "cate": "graph",
+    "difficulty": "middle"
+}

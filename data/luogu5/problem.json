@@ -1,0 +1,10 @@
+{
+    "time_limit": 1000.0,
+    "memory_limit": [
+        6400,
+        640,
+        64
+    ],
+    "cate": "dp",
+    "difficulty": "hard"
+}
