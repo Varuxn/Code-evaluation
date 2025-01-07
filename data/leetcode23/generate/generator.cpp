@@ -3,18 +3,22 @@
 using namespace std;
 
 // Helper function to generate a random string of a given length
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 string generateRandomWord(int mx) {
     string word;
-    int len=rand()%9+2;
+    int len=rnd()%9+2;
     for (int i = 1; i <=len; ++i) {
-        word += 'a' + rand() % mx;
+        word += 'a' + rnd() % mx;
     }
     return word;
 }
 
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
-    srand(static_cast<unsigned>(time(0)));
     int n=data;
     int mx=log10(n)+3;
     cout<<n<<endl;
@@ -27,6 +31,6 @@ int main(int argc, char* argv[]) {
         cout<<s<<endl;
     }
     for(int i=1;i<=n;i++)
-        putchar('a'+rand()%mx);
+        putchar('a'+rnd()%mx);
     return 0;
 }

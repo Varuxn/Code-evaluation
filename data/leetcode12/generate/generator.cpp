@@ -12,12 +12,18 @@ int main(int argc, char* argv[]) {
     int n=rng(std::max(10,data-10),data);
     int m=rng(std::max(10,data-10),data);
     std::cout<<n<<' '<<m<<'\n';
+    bool flag=rnd()&1;
     for(int i=1;i<=n;i++)
     {
         for(int i=1;i<=m;i++)
         {
-            if(rnd()%4) std::cout<<1<<' ';
-            else std::cout<<0<<' ';
+            
+            if(flag) std::cout<<"1 ";
+            else
+            {
+                if(rnd()%7) std::cout<<1<<' ';
+                else std::cout<<0<<' ';
+            };
         }
         putchar('\n');
     }

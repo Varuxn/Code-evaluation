@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
+
 struct Node
 {
     int l,r,val;
@@ -17,7 +24,7 @@ void insert(int &x)
         tre[x].l=tre[x].r=0;
         return ; 
     }
-    if(rand()&1) insert(tre[x].l);
+    if(rnd()&1) insert(tre[x].l);
     else insert(tre[x].r);
 }
 
@@ -37,7 +44,6 @@ void sufdfs(int root, string& suf) {
 
 int main(int argc, char* argv[]){
     int data = std::atoi(argv[1]);
-    srand(time(0)); // 用当前时间作为随机数种子
     int n=data;
     for(int i=1;i<=26;i++) s[i]=i-1+'A';
     random_shuffle(s+1,s+27);

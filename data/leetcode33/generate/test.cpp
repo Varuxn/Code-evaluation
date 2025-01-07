@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     catch_error(argc);
 
     // input
-    int n; string str; cin>>n>>str;
+    int n; string str; cin>>str>>n;
     // solve
     Solution solution;
     get_usage(argv[0], argv[1]);

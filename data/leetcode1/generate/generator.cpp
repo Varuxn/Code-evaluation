@@ -41,14 +41,14 @@ using namespace std;
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     // int data=20;
-    int n = rng(data-10, data);
+    int n = rng(data-9, data);
     if(n<=10)
     {
         cout<<n<<' '<<n*(n-1)/2<<endl;
         for(int i=1;i<=n;i++)
             for(int j=1;j<i;j++)
                 cout<<i<<' '<<j<<endl;
-        cout<<rand()%n+1;
+        cout<<rnd()%n+1;
         return 0;
     }
     int m = 4*n;

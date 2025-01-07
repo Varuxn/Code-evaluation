@@ -1,8 +1,14 @@
 import os
 import json
 import subprocess
+import sys
 
-def generate_test_cases():
+def generate_test_cases(selected_problems=None):
+    """
+    Generate test cases for problems in the data directory.
+
+    :param selected_problems: List of problem IDs to process. If None, process all problems.
+    """
     data_dir = "data"
     test_dir = "test"
 
@@ -10,6 +16,11 @@ def generate_test_cases():
     os.makedirs(test_dir, exist_ok=True)
 
     for problem_id in os.listdir(data_dir):
+        # 如果传入了特定问题集，则跳过不在列表中的问题
+        if selected_problems and problem_id != selected_problems:
+            continue
+        # print(problem_id)
+
         problem_path = os.path.join(data_dir, problem_id)
         generate_path = os.path.join(problem_path, "generate")
         generator_cpp_path = os.path.join(generate_path, "generator.cpp")
@@ -66,4 +77,5 @@ def generate_test_cases():
                     print(f"Error writing test case {test_idx} for {problem_id}, N={n_value}: {e}")
 
 if __name__ == "__main__":
-    generate_test_cases()
+    generate_test_cases('luogu13')
+    # generate_test_cases()

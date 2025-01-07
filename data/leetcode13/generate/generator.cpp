@@ -43,6 +43,7 @@ int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     int n=data;
     int m=4*data;
+    if(data==10) m=2*n;
     graph(n,m);
     return 0;
 }

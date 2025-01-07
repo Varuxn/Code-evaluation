@@ -1,20 +1,24 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
 
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 // Helper function to generate a random string of a given length
 string generateRandomWord(int mxlen) {
     string word;
-    int len=rand()%mxlen+1;
+    int len=rnd()%mxlen+1;
     for (int i = 1; i <=len; ++i) {
-        word += 'a' + rand() % 26;
+        word += 'a' + rnd() % 26;
     }
     return word;
 }
 
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
-    srand(static_cast<unsigned>(time(0)));
+    // int data=10000;
     int n=data;
     cout<<n<<endl;
     vector<string> ch;
@@ -28,14 +32,13 @@ int main(int argc, char* argv[]) {
         cout<<s<<endl;
     }
     string str;
-    while(str.size()<n-20)
+    bool flag=rnd()&1;
+    while((int)str.size()+20<n)
     {
-        int pos=rand()%((int)ch.size());
+        int pos=rnd()%((int)ch.size());
         str+=ch[pos];
-    }
-    if(rand()%4==0)
-    {
-        str.push_back('a');
+        if(flag) str+="s";
+        // cout<<n-20<<' '<<str.size()<<' '<<(str.size()<n-20)<<' '<<ch[pos]<<endl;
     }
     cout<<str;
     return 0;

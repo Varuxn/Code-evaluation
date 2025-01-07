@@ -52,6 +52,7 @@ int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     long long n=rng(std::max(10,data-10),data);
     long long m=rng(1,std::min(n*(n-1)/2,3ll*n));
+    m=std::max(m,n);
     graph(n, m);
     return 0;
 }

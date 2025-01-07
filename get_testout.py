@@ -2,7 +2,7 @@ import os
 import shutil
 import subprocess
 
-def copy_execute_file():
+def copy_execute_file(selected_problems=None):
     execute_file = "execute.h"
     data_dir = "data"
 
@@ -11,6 +11,8 @@ def copy_execute_file():
         return
 
     for problem_id in os.listdir(data_dir):
+        if selected_problems and problem_id != selected_problems:
+            continue
         problem_generate_dir = os.path.join(data_dir, problem_id, "generate")
 
         if os.path.isdir(problem_generate_dir):
@@ -21,11 +23,13 @@ def copy_execute_file():
             else:
                 print(f"{execute_file} already exists in {problem_generate_dir}")
 
-def run_tests_and_generate_outputs():
+def run_tests_and_generate_outputs(selected_problems=None):
     data_dir = "data"
     test_dir = "test"
 
     for problem_id in os.listdir(data_dir):
+        if selected_problems and problem_id != selected_problems:
+            continue
         problem_generate_dir = os.path.join(data_dir, problem_id, "generate")
         test_problem_dir = os.path.join(test_dir, problem_id)
 
@@ -85,11 +89,15 @@ def delete_test_executable_result_files():
                 os.remove(file_path)
                 print(f"Deleted file: {file_path}")
 
-if __name__ == "__main__":
+def deal_problem(selected_problems=None):
     # Step 1: Copy execute.h
-    copy_execute_file()
+    copy_execute_file(selected_problems)
 
     # Step 2: Run tests and generate outputs
-    run_tests_and_generate_outputs()
+    run_tests_and_generate_outputs(selected_problems)
 
     delete_test_executable_result_files()
+
+if __name__ == "__main__":
+
+    deal_problem('luogu13')

@@ -1,4 +1,4 @@
-﻿id,desc,desc_zh,data,time_limit,memory_limit,std,generator,test,cate,difficulty,mem_std,,,,,,,,,,,,,,,
+﻿id,desc,desc_zh,data,time_limit,memory_limit,std,generator,test,cate,difficulty,mem_std
 luogu1,"Give an integer N and K transformation rules.
 Rules:
 - Change one digit to another.
@@ -200,7 +200,7 @@ int main(int argc, char *argv[])
     cout << result ;
 
     return 0;
-}",Floyd,hard,,,,,,,,,,,,,,,,
+}",Floyd,hard,
 luogu2,"In class, there are always some classmates who talk to people before and after, which is a headache for the head teacher in primary school. However, the head teacher Xiaoxue found some interesting phenomenon, when the students' seats are determined, only a limited number of $D$to the students will talk to each other in class.
 In the classroom, the students sit in the $M$row $N$column, and the students sitting in the $j$column of the $i$row are in the position of $(i,j)$. In order to facilitate students to enter and exit, the classroom is set up a horizontal channel of $K$and a vertical channel of $L$.
 So, the clever snow came up with a way that might reduce the problem of students talking to each other in class: she planned to rearrange the tables and chairs and change the position of the passage between the students' desks and chairs, because if a passage separated $2 students who could talk to each other, then they would not talk to each other.
@@ -355,7 +355,7 @@ int main(int argc, char *argv[])
         else cout<<' ';
     }
     return 0;
-}",avarice,hard,,,,,,,,,,,,,,,,
+}",avarice,hard,
 luogu4,"There is A crossing pawn at $A$on the board that needs to go to the target $B$point. Pawn walking rules: can go down, or right. At the same time, there is an opposing horse at the $C$point on the board, and the point where the horse is located and all the points reachable by the jump step are called the control point of the opposing horse. Therefore, it is called ""horse blocking the river and pawn"".
 The board is represented by coordinates, $A$point $(0, 0)$, $B$point $(n, m)$, and the same horse position coordinates need to be given.
 Now you are asked to calculate the number of paths that the pawn can take from point $A$to point $B$, assuming that the position of the horse is fixed, not that the pawn moves one step at a time.
@@ -453,7 +453,7 @@ int main(int argc, char *argv[])
     cout << result ;
 
     return 0;
-}",dp,middle,,,,,,,,,,,,,,,,
+}",dp,middle,
 luogu5,"Xiao Ming's flower shop has just opened. In order to attract customers, he wants to put a row of flowers in front of the shop, with a total of $m$POTS. By investigating customers' preferences, Xiao Ming made a list of customers' favorite $n$flowers. In order to display more flowers at the door, it is stipulated that the $i$flower can not exceed the $a_i$pot, and the same flower is placed together when the flowers are arranged, and the different kinds of flowers need to be arranged in order from the smallest to the largest according to the label.
 Try programming to figure out how many different flower arrangements there are.
 
@@ -552,7 +552,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",dp,hard,,,,,,,,,,,,,,,,
+}",dp,hard,
 luogu6,"Bracteoles are ready to drive down the road.
 There are $n$stops on the highway, numbered from $1$to $n$. The distance between site $i$and site $i + 1$is $v_i$km.
 Every station on the highway can be refueled, the price of a liter of gas at the station numbered $i$is $a_i$, and each station only sells integer liters of gas.
@@ -744,7 +744,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",dp,middle,,,,,,,,,,,,,,,,
+}",dp,middle,
 luogu7,"Xuan Xuan and Kai Kai are playing a game called ""Dragon Tiger Fight"", the game board is a line segment, there are $n$barracks on the line segment (numbered $1 \sim n$from left to right), and the adjacent numbered barracks are separated by $1$cm, that is, the board is a line segment with a length of $n-1$cm. There are $c_i$engineers in the $i$barracks.
 Xuan Xuan is on the left, representing ""dragon""; Kai Kai is on the right, representing ""Tiger"". They use barracks $m$as a demarcation line, the sappers on the left belong to the Dragon force, the sappers on the right belong to the tiger force, and the sappers in barracks $m$are very tangled, they don't belong to either side.
 The momentum of a barracks is: the number of engineers in the barracks $\times $the distance between the barracks and the $m$barracks; The power of a party participating in the game is defined as the sum of the momentum of all the barracks belonging to that party.
@@ -872,7 +872,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",simulate,middle,,,,,,,,,,,,,,,,
+}",simulate,middle,
 luogu8,"A teacher of abacus arithmetic in a certain school used a test method to quickly test the ability of abacus arithmetic addition. He randomly generated a set of positive integers, each with different numbers, and asked the students to answer: How many of these numbers are exactly equal to the sum of two other (different) numbers in the set?
 Recently the teacher gave some test questions, please help to find out the answers.
 
@@ -978,7 +978,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",simulate,middle,,,,,,,,,,,,,,,,
+}",simulate,middle,
 luogu9,"There is a water room in the school, which is equipped with a total of $m$taps for students to turn on the water, and the water supply of each tap is equal to $1 per second.
 Now there are $n$students ready to receive water, their initial order of receiving water has been determined. These students are numbered from $1$to $n$in the order of receiving water, and the amount of water received by students with $i$is $w_i$. When receiving water, students from $1$to $m$each occupy a faucet and open the faucet at the same time. When one of the students $j$completes the water demand $w_j$, the next student $k$who waits in line to receive water immediately takes the place of the student $j$and starts to receive water. The replacement process is instantaneous and no water is wasted. That is, when $j$finishes receiving water at the end of $x$second, $k$starts receiving water immediately at $x+1$second. If the current number of people receiving water $n'$is less than $m$, only $n'$tap water supply, other $m - n'$tap closed.
 Now give the amount of water received by $n$students, and ask how many seconds it takes for all students to receive water according to the above rules.
@@ -1090,7 +1090,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",avarice,middle,,,,,,,,,,,,,,,,
+}",avarice,middle,
 luogu10,"Given a permutation of length n, find the MTH permutation after it
 
 solution main function
@@ -1175,7 +1175,7 @@ int main(int argc, char *argv[])
     for(auto it :num) cout<<it<<' ';
 
     return 0;
-}",STL,middle,,,,,,,,,,,,,,,,
+}",STL,middle,
 luogu11,"Given a positive integer $k$, the sum of all the powers of $k$and a finite number of unequal powers of $k$forms an increasing sequence, for example, when $k = 3$, the sequence is:
 $1, 3, 4, 9, 10, 12, 13, \ldots$
 (the sequence is actually: $3 ^ 0, 1, 3 ^ ^ 3 ^ 0 + 1, 2, 3 ^ ^ 0 + 3 ^ 2 or 3 ^ 1 + 3 ^ 2, 3 ^ 0 + 3 ^ 2 + 3 ^ 1,... $)
@@ -1264,7 +1264,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 luogu12,"The middle order and post order of a binary tree are given. Find its preordering. (Convention tree nodes are represented by different capital letters).
 
 solution main function
@@ -1328,6 +1328,13 @@ public:
 };","#include<bits/stdc++.h>
 using namespace std;
 
+
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
+
 struct Node
 {
     int l,r,val;
@@ -1344,7 +1351,7 @@ void insert(int &x)
         tre[x].l=tre[x].r=0;
         return ; 
     }
-    if(rand()&1) insert(tre[x].l);
+    if(rnd()&1) insert(tre[x].l);
     else insert(tre[x].r);
 }
 
@@ -1364,7 +1371,6 @@ void sufdfs(int root, string& suf) {
 
 int main(int argc, char* argv[]){
     int data = std::atoi(argv[1]);
-    srand(time(0)); // 用当前时间作为随机数种子
     int n=data;
     for(int i=1;i<=26;i++) s[i]=i-1+'A';
     random_shuffle(s+1,s+27);
@@ -1398,7 +1404,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",simulate,easy,,,,,,,,,,,,,,,,
+}",simulate,easy,
 luogu13,"There is a row of $N$coins on the table, and each coin is heads up. Now to flip all the coins tails up, the rule is that you can flip any $N- $1 coin at a time (heads up are flipped tails up and vice versa). Find the shortest sequence of operations (turning each flip of $N-1 coin into one operation).
 
 solution main function
@@ -1471,11 +1477,16 @@ public:
     }
 };","#include<bits/stdc++.h>
 using namespace std;
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
+
 int main(int argc, char* argv[]) {
-    srand(time(0));
     int data = std::atoi(argv[1]);
     if(data<=10) cout<<data;
-    else cout<<data-10+rand()%5*2;
+    else cout<<data-20+rnd()%10*2;
     return 0;
 }","#include <bits/stdc++.h>
 #include ""execute.h""
@@ -1499,7 +1510,7 @@ int main(int argc, char *argv[])
     for(auto it:result.second)
         cout<<it<<endl;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 luogu14,"Yangtze River Yacht Club set up $n$yacht rental station on the Yangtze River $1,2,\cdots,n$. Visitors can hire their yacht at these yacht hire stations and return it at any of the yacht hire stations downstream. The rental between the yacht rental station $i$and the yacht rental station $j$is $r(i,j)$($1\le i\lt j\le n$). Try to design an algorithm to calculate the minimum rental required from the yacht rental station $1 to the yacht rental station $n$.
 
 solution main function
@@ -1617,7 +1628,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",dp,middle,,,,,,,,,,,,,,,,
+}",dp,middle,
 leetcode1,"Child A is playing a message game with his friends. The rules of the game are as follows:
 There are n players, all of whom are numbered from 0 to n-1, and child A is numbered 0
 Each player has a fixed number of other players to whom information can be transmitted (or not). The information transfer relationship is one-way (for example, A can send information to B, but B cannot send information to A).
@@ -1738,14 +1749,14 @@ using namespace std;
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     // int data=20;
-    int n = rng(data-10, data);
+    int n = rng(data-9, data);
     if(n<=10)
     {
         cout<<n<<' '<<n*(n-1)/2<<endl;
         for(int i=1;i<=n;i++)
             for(int j=1;j<i;j++)
                 cout<<i<<' '<<j<<endl;
-        cout<<rand()%n+1;
+        cout<<rnd()%n+1;
         return 0;
     }
     int m = 4*n;
@@ -1783,7 +1794,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",dp,middle,,,,,,,,,,,,,,,,
+}",dp,middle,
 leetcode2,"There is an undirected star graph consisting of n nodes labeled from 1 to n. A star graph is a graph where there is one center node and exactly n - 1 edges that connect the center node with every other node.
 
 You are given a 2D integer array edges where each edges[i] = [ui, vi] indicates that there is an edge between the nodes ui and vi. Return the center of the given star graph.
@@ -1885,7 +1896,7 @@ int main(int argc, char *argv[])
     cout << result << ""\n"";
 
     return 0;
-}",tree,easy,,,,,,,,,,,,,,,,
+}",tree,easy,
 leetcode7,"You are given an integer array prices where prices[i] is the price of the ith item in a shop.
 There is a special discount for items in the shop. If you buy the ith item, then you will receive a discount equivalent to prices[j] where j is the minimum index such that j > i and prices[j] <= prices[i]. Otherwise, you will not receive any discount at all.
 Return an integer array answer where answer[i] is the final price you will pay for the ith item of the shop, considering the special discount.
@@ -2020,7 +2031,7 @@ public:
         }
         return ans;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode8,"You are given an integer array arr. You can choose a set of integers and remove all the occurrences of these integers in the array.
 Return the minimum size of the set so that at least half of the integers of the array are removed.
 
@@ -2153,7 +2164,7 @@ int main(int argc, char *argv[])
     cout<<result;
 
     return 0;
-}",avarice,middle,,,,,,,,,,,,,,,,
+}",avarice,middle,
 leetcode9,"There is a safe protected by a password. The password is a sequence of n digits where each digit can be in the range [0, k - 1].
 The safe has a peculiar way of checking the password. When you enter in a sequence, it checks the most recent n digits that were entered each time you type a digit.
     For example, the correct password is ""345"" and you enter in ""012345"":
@@ -2279,7 +2290,7 @@ int main(int argc, char *argv[])
     for(auto it:result) cout<<it<<' ';
 
     return 0;
-}",graph,hard,,,,,,,,,,,,,,,,
+}",graph,hard,
 leetcode10,"There are n servers numbered from 0 to n - 1 connected by undirected server-to-server connections forming a network where connections[i] = [ai, bi] represents a connection between servers ai and bi. Any server can reach other servers directly or indirectly through the network.
 A critical connection is a connection that, if removed, will make some servers unable to reach some other server.
 Return all critical connections in the network in any order.
@@ -2418,6 +2429,7 @@ int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     long long n=rng(std::max(10,data-10),data);
     long long m=rng(1,std::min(n*(n-1)/2,3ll*n));
+    m=std::max(m,n);
     graph(n, m);
     return 0;
 }","#include <bits/stdc++.h>
@@ -2457,7 +2469,7 @@ int main(int argc, char *argv[])
         cout<<x<<' '<<y<<' ';
     }
     return 0;
-}",graph,hard,,,,,,,,,,,,,,,,
+}",graph,hard,
 leetcode11,"Given a weighted undirected connected graph with n vertices numbered from 0 to n - 1, and an array edges where edges[i] = [a_i, b_i, weight_i] represents a bidirectional and weighted edge between nodes a_i and b_i. A minimum spanning tree (MST) is a subset of the graph's edges that connects all vertices without cycles and with the minimum possible total edge weight.
 
 Find all the critical and pseudo-critical edges in the given graph's minimum spanning tree (MST). An MST edge whose deletion from the graph would cause the MST weight to increase is called a critical edge. On the other hand, a pseudo-critical edge is that which can appear in some MSTs but not all.
@@ -2685,7 +2697,7 @@ int main(int argc, char *argv[])
         cout<<endl;
     }
     return 0;
-}",graph,hard,,,,,,,,,,,,,,,,
+}",graph,hard,
 leetcode12,"You are given an m * n binary grid grid where 1 represents land and 0 represents water. An island is a maximal 4-directionally (horizontal or vertical) connected group of 1's.
 The grid is said to be connected if we have exactly one island, otherwise is said disconnected.
 In one day, we are allowed to change any single land cell (1) into a water cell (0).
@@ -2810,12 +2822,18 @@ int main(int argc, char* argv[]) {
     int n=rng(std::max(10,data-10),data);
     int m=rng(std::max(10,data-10),data);
     std::cout<<n<<' '<<m<<'\n';
+    bool flag=rnd()&1;
     for(int i=1;i<=n;i++)
     {
         for(int i=1;i<=m;i++)
         {
-            if(rnd()%4) std::cout<<1<<' ';
-            else std::cout<<0<<' ';
+            
+            if(flag) std::cout<<""1 "";
+            else
+            {
+                if(rnd()%7) std::cout<<1<<' ';
+                else std::cout<<0<<' ';
+            };
         }
         putchar('\n');
     }
@@ -2852,7 +2870,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,hard,,,,,,,,,,,,,,,,
+}",graph,hard,
 leetcode13,"There is a directed graph of n nodes with each node labeled from 0 to n - 1. The graph is represented by a 0-indexed 2D integer array graph where graph[i] is an integer array of nodes adjacent to node i, meaning there is an edge from node i to each node in graph[i].
 A node is a terminal node if there are no outgoing edges. A node is a safe node if every possible path starting from that node leads to a terminal node (or another safe node).
 Return an array containing all the safe nodes of the graph. The answer should be sorted in ascending order.
@@ -2991,6 +3009,7 @@ int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     int n=data;
     int m=4*data;
+    if(data==10) m=2*n;
     graph(n,m);
     return 0;
 }","#include <bits/stdc++.h>
@@ -3024,7 +3043,7 @@ int main(int argc, char *argv[])
     for(auto it:result)
         cout<<it<<' ';
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode14,"You are given an integer n. There is an undirected graph with n vertices, numbered from 0 to n - 1. You are given a 2D integer array edges where edges[i] = [ai, bi] denotes that there exists an undirected edge connecting vertices ai and bi.
 Return the number of complete connected components of the graph.
 A connected component is a subgraph of a graph in which there exists a path between any two vertices, and no vertex of the subgraph shares an edge with a vertex outside of the subgraph.
@@ -3190,7 +3209,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode15,"You are given an m * n binary matrix grid, where 0 represents a sea cell and 1 represents a land cell.
 A move consists of walking from one land cell to another adjacent (4-directionally) land cell or walking off the boundary of the grid.
 Return the number of land cells in grid for which we cannot walk off the boundary of the grid in any number of moves.
@@ -3340,7 +3359,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode16,"You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi].
 The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.
 Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.
@@ -3488,7 +3507,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode17,"You are given two m x n binary matrices grid1 and grid2 containing only 0's (representing water) and 1's (representing land). An island is a group of 1's connected 4-directionally (horizontal or vertical). Any cells outside of the grid are considered water cells.
 An island in grid2 is considered a sub-island if there is an island in grid1 that contains all the cells that make up this island in grid2.
 Return the number of islands in grid2 that are considered sub-islands.
@@ -3665,7 +3684,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode18,"On a 2D plane, we place n stones at some integer coordinate points. Each coordinate point may have at most one stone.
 A stone can be removed if it shares either the same row or the same column as another stone that has not been removed.
 Given an array stones of length n where stones[i] = [xi, yi] represents the location of the ith stone, return the largest possible number of stones that can be removed.
@@ -3803,7 +3822,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode19,"Alice and Bob have an undirected graph of n nodes and three types of edges:
     Type 1: Can be traversed by Alice only.
     Type 2: Can be traversed by Bob only.
@@ -4013,7 +4032,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,hard,,,,,,,,,,,,,,,,
+}",graph,hard,
 leetcode20,"There is an undirected tree with n nodes labeled from 0 to n - 1 and n - 1 edges.
 You are given a 2D integer array edges of length n - 1 where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the tree. You are also given an integer array restricted which represents restricted nodes.
 Return the maximum number of nodes you can reach from node 0 without visiting a restricted node.
@@ -4161,7 +4180,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",graph,middle,,,,,,,,,,,,,,,,
+}",graph,middle,
 leetcode21,"In English, we have a concept called root, which can be followed by some other word to form another longer word - let's call this word derivative. For example, when the root ""help"" is followed by the word ""ful"", we can form a derivative ""helpful"".
 Given a dictionary consisting of many roots and a sentence consisting of words separated by spaces, replace all the derivatives in the sentence with the root forming it. If a derivative can be replaced by more than one root, replace it with the root that has the shortest length.
 Return the sentence after the replacement.
@@ -4291,18 +4310,18 @@ public:
         }
         return root;
     }
-};","#include <iostream>
-#include <vector>
-#include <string>
-#include <cstdlib>
-#include <ctime>
-#include <algorithm>
+};","#include <bits/stdc++.h>
 using namespace std;
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 // Function to generate a random word of given length
 std::string generateRandomWord(int length) {
     std::string word;
     for (int i = 0; i < length; ++i) {
-        word += 'a' + rand() % 26; // Random lowercase letter
+        word += 'a' + rnd() % 26; // Random lowercase letter
     }
     return word;
 }
@@ -4311,7 +4330,7 @@ std::string generateRandomWord(int length) {
 std::vector<std::string> generateDictionary(int dictSize, int maxWordLength) {
     std::vector<std::string> dictionary;
     for (int i = 0; i < dictSize; ++i) {
-        int wordLength = 1 + rand() % maxWordLength; // Random word length between 1 and maxWordLength
+        int wordLength = 1 + rnd() % maxWordLength; // Random word length between 1 and maxWordLength
         dictionary.push_back(generateRandomWord(wordLength));
     }
     return dictionary;
@@ -4321,17 +4340,17 @@ std::vector<std::string> generateDictionary(int dictSize, int maxWordLength) {
 std::string generateSentence(int numWords, int maxWordLength, const std::vector<std::string>& dictionary) {
     std::string sentence;
     for (int i = 0; i < numWords; ++i) {
-        int useDictionary = rand() % 2; // 50% chance to use a word from the dictionary
+        int useDictionary = rnd() % 2; // 50% chance to use a word from the dictionary
         if (useDictionary && !dictionary.empty()) {
-            sentence += dictionary[rand() % dictionary.size()];
+            sentence += dictionary[rnd() % dictionary.size()];
         } else {
-            int wordLength = 1 + rand() % maxWordLength;
+            int wordLength = 1 + rnd() % maxWordLength;
             sentence += generateRandomWord(wordLength);
         }
-        if(rand()&1) sentence+=""ing"";
-        else if(rand()&1) sentence+=""ed"";
-        else if(rand()&1) sentence+=""es"";
-        else if(rand()&1) sentence+=""qwerqwe"";
+        if(rnd()&1) sentence+=""ing"";
+        else if(rnd()&1) sentence+=""ed"";
+        else if(rnd()&1) sentence+=""es"";
+        else if(rnd()&1) sentence+=""qwerqwe"";
         if (i < numWords - 1) {
             sentence += "" ""; // Add space between words
         }
@@ -4342,7 +4361,6 @@ std::string generateSentence(int numWords, int maxWordLength, const std::vector<
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
     // int data=20;
-    srand(static_cast<unsigned>(time(0)));
 
     // Parameters for data generation
     int dictSize = data;        // Number of words in the dictionary
@@ -4394,7 +4412,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",string,middle,,,,,,,,,,,,,,,,
+}",string,middle,
 leetcode23,"You are given a 0-indexed string s and a dictionary of words dictionary. You have to break s into one or more non-overlapping substrings such that each substring is present in dictionary. There may be some extra characters in s which are not present in any of the substrings.
 Return the minimum number of extra characters left over if you break up s optimally.
 
@@ -4485,18 +4503,22 @@ public:
 using namespace std;
 
 // Helper function to generate a random string of a given length
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 string generateRandomWord(int mx) {
     string word;
-    int len=rand()%9+2;
+    int len=rnd()%9+2;
     for (int i = 1; i <=len; ++i) {
-        word += 'a' + rand() % mx;
+        word += 'a' + rnd() % mx;
     }
     return word;
 }
 
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
-    srand(static_cast<unsigned>(time(0)));
     int n=data;
     int mx=log10(n)+3;
     cout<<n<<endl;
@@ -4509,7 +4531,7 @@ int main(int argc, char* argv[]) {
         cout<<s<<endl;
     }
     for(int i=1;i<=n;i++)
-        putchar('a'+rand()%mx);
+        putchar('a'+rnd()%mx);
     return 0;
 }","#include <bits/stdc++.h>
 #include ""execute.h""
@@ -4540,7 +4562,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",string,middle,,,,,,,,,,,,,,,,
+}",string,middle,
 leetcode24,"Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
 Note that the same word in the dictionary may be reused multiple times in the segmentation.
 
@@ -4619,20 +4641,24 @@ public:
 };","#include <bits/stdc++.h>
 
 using namespace std;
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
 
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 // Helper function to generate a random string of a given length
 string generateRandomWord(int mxlen) {
     string word;
-    int len=rand()%mxlen+1;
+    int len=rnd()%mxlen+1;
     for (int i = 1; i <=len; ++i) {
-        word += 'a' + rand() % 26;
+        word += 'a' + rnd() % 26;
     }
     return word;
 }
 
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
-    srand(static_cast<unsigned>(time(0)));
+    // int data=10000;
     int n=data;
     cout<<n<<endl;
     vector<string> ch;
@@ -4646,14 +4672,13 @@ int main(int argc, char* argv[]) {
         cout<<s<<endl;
     }
     string str;
-    while(str.size()<n-20)
+    bool flag=rnd()&1;
+    while((int)str.size()+20<n)
     {
-        int pos=rand()%((int)ch.size());
+        int pos=rnd()%((int)ch.size());
         str+=ch[pos];
-    }
-    if(rand()%4==0)
-    {
-        str.push_back('a');
+        if(flag) str+=""s"";
+        // cout<<n-20<<' '<<str.size()<<' '<<(str.size()<n-20)<<' '<<ch[pos]<<endl;
     }
     cout<<str;
     return 0;
@@ -4686,7 +4711,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",string,middle,,,,,,,,,,,,,,,,
+}",string,middle,
 leetcode25,"You are given an array of strings products and a string searchWord.
 Design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.
 Return a list of lists of the suggested products after each character of searchWord is typed.
@@ -4773,12 +4798,17 @@ public:
 
 using namespace std;
 
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
+
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
 // Helper function to generate a random string of a given length
 string generateRandomWord(int mxlen) {
     string word;
-    int len=rand()%mxlen+1;
+    int len=rnd()%mxlen+1;
     for (int i = 1; i <=len; ++i) {
-        word += 'a' + rand() % 26;
+        word += 'a' + rnd() % 26;
     }
     return word;
 }
@@ -4786,21 +4816,20 @@ string bas;
 string pre()
 {
     string s;
-    int len=rand()%20;
+    int len=rnd()%20;
     for(int j=0;j<len;j++)
         s.push_back(bas[j]);
-    len=rand()%20;
+    len=rnd()%20;
     for(int j=0;j<len;j++)
-        s.push_back('a' + rand() % 26);
+        s.push_back('a' + rnd() % 26);
     return s;
 }
 int main(int argc, char* argv[]) {
     int data = std::atoi(argv[1]);
-    srand(static_cast<unsigned>(time(0)));
     int n=data;
     cout<<n<<endl;
     for (int i = 1; i <=40; ++i)
-        bas += 'a' + rand() % 26;
+        bas += 'a' + rnd() % 26;
     map<string,bool> mp;
     for(int i=1;i<=n;i++)
     {
@@ -4847,7 +4876,7 @@ int main(int argc, char *argv[])
         cout<<endl;
     }
     return 0;
-}",string,middle,,,,,,,,,,,,,,,,
+}",string,middle,
 leetcode26,"There are n soldiers standing in a line. Each soldier is assigned a unique rating value.
 You have to form a team of 3 soldiers amongst them under the following rules:
     Choose 3 soldiers with index (i, j, k) with rating (rating[i], rating[j], rating[k]).
@@ -5051,7 +5080,7 @@ public:
 
         return ans;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode27,"Given a string s, return the number of palindromic substrings in it.
 A string is a palindrome when it reads the same backward as forward.
 A substring is a contiguous sequence of characters within the string.
@@ -5209,7 +5238,7 @@ public:
 
         return ans;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode28,"You are given a sorted integer array arr containing 1 and prime numbers, where all the integers of arr are unique. You are also given an integer k.
 For every i and j where 0 <= i < j < arr.length, we consider the fraction arr[i] / arr[j].
 Return the kth smallest fraction considered. Return your answer as an array of integers of size 2, where answer[0] == arr[i] and answer[1] == arr[j].
@@ -5365,7 +5394,7 @@ int main(int argc, char *argv[])
     // output
     for(auto it:result) cout<<it;
     return 0;
-}",double pointer,hard,,,,,,,,,,,,,,,,
+}",double pointer,hard,
 leetcode29,"You are given a 2D matrix of size m x n, consisting of non-negative integers. You are also given an integer k.
 The value of coordinate (a, b) of the matrix is the XOR of all matrix[i][j] where 0 <= i <= a < m and 0 <= j <= b < n (0-indexed).
 Find the kth largest value (1-indexed) of all the coordinates of matrix.
@@ -5516,7 +5545,7 @@ public:
         }
         return pq.top();
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode30,"The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.
     For example, ""ACGAATTCCG"" is a DNA sequence.
 When studying DNA, it is useful to identify repeated sequences within the DNA.
@@ -5661,7 +5690,7 @@ int main(int argc, char *argv[])
     // output
     for(auto it:result) cout<<it;
     return 0;
-}",bit operation,middle,,,,,,,,,,,,,,,,
+}",bit operation,middle,
 leetcode31,"Suppose you have n integers labeled 1 through n. A permutation of those n integers perm (1-indexed) is considered a beautiful arrangement if for every i (1 <= i <= n), either of the following is true:
     perm[i] is divisible by i.
     i is divisible by perm[i].
@@ -5791,7 +5820,7 @@ public:
         }
         return f.back();
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode32,"Given an array of integers arr.
 We want to select three indices i, j and k where (0 <= i < j <= k < arr.length).
 Let's define a and b as follows:
@@ -5927,7 +5956,7 @@ public:
         }
         return ans;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode33,"Given a binary string s and an integer k, return true if every binary code of length k is a substring of s. Otherwise, return false.
 
 solution main function
@@ -6005,6 +6034,7 @@ public:
     }
 };","#include <algorithm>
 #include<bits/stdc++.h>
+#include <iterator>
 #include <ratio>
 using ll = long long;
 using namespace std;
@@ -6015,8 +6045,30 @@ int rng(int l, int r) { // [l, r]
 }
 int main(int argc, char* argv[]){
     int data = std::atoi(argv[1]);
+    // int data=10;
     int n=data,k=rng(1,20);
-    for(int i=1;i<=n;i++) cout<<rng(0,1);
+    int flag=rnd()&1;
+    if(flag)
+    {
+        for(int i=1;i<=n;i++) cout<<rng(0,1);
+    }
+    else
+    {
+        k=rng(1,log2(n));
+        vector<string> v;
+        for(int sta=0;sta<(1ll<<k+1);sta++)
+        {
+            string str;
+            for(int i=1;i<=k;i++)
+                str.push_back('0'+((sta>>i-1)&1));
+            v.push_back(str);
+        }
+        random_shuffle(v.begin(),v.end());
+        string s;
+        for(auto it:v) s+=it;
+        while((int)s.size()<n) s.push_back((rnd()&1)+'0');
+        cout<<s;
+    }
     cout<<endl<<k;
     return 0;
 }","#include <bits/stdc++.h>
@@ -6028,7 +6080,7 @@ int main(int argc, char *argv[])
     catch_error(argc);
 
     // input
-    int n; string str; cin>>n>>str;
+    int n; string str; cin>>str>>n;
     // solve
     Solution solution;
     get_usage(argv[0], argv[1]);
@@ -6039,7 +6091,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",bit operation,middle,,,,,,,,,,,,,,,,
+}",bit operation,middle,
 leetcode34,"Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 <= i <= j < n.
 
 solution main function
@@ -6154,7 +6206,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",STL,middle,,,,,,,,,,,,,,,,
+}",STL,middle,
 leetcode35,"You are given a binary array nums and an integer k.
 A k-bit flip is choosing a subarray of length k from nums and simultaneously changing every 0 in the subarray to 1, and every 1 in the subarray to 0.
 Return the minimum number of k-bit flips required so that there is no 0 in the array. If it is not possible, return -1.
@@ -6259,33 +6311,39 @@ int main(int argc, char* argv[]){
         cout<<pre<<' ';
     }
     return 0;
-}","#include <bits/stdc++.h>
-#include ""execute.h""
-#include ""std.h""
+}","#include <algorithm>
+#include<bits/stdc++.h>
+#include <ratio>
+using ll = long long;
 using namespace std;
-int main(int argc, char *argv[])
-{
-    catch_error(argc);
+std::mt19937_64 rnd(std::chrono::steady_clock().now().time_since_epoch().count());
 
-    // input
-    int n,k; cin>>n>>k;
-    vector<int> num;
+int rng(int l, int r) { // [l, r]
+    return rnd() % (r - l + 1) + l;
+}
+int s[100010];
+int main(int argc, char* argv[]){
+    int data = std::atoi(argv[1]);
+    int n=data;
+    int k=rng(10,n/3);
+    // int k=3;
+    int m=rng(n/2,n);
+    // int m=5;
+    cout<<n<<' '<<k<<endl;
+    for(int i=1;i<=m;i++)
+    {
+        int l=rng(1,n-k+1);
+        int r=l+k-1;
+        s[l]^=1; s[r+1]^=1;
+    }
+    int pre=1;
     for(int i=1;i<=n;i++)
     {
-        int x; cin>>x;
-        num.push_back(x);
+        pre^=s[i];
+        cout<<pre<<' ';
     }
-    // solve
-    Solution solution;
-    get_usage(argv[0], argv[1]);
-    set_cpu_limit();
-    int result = solution.solve(num,k);
-    get_usage(argv[0], argv[1]);
-
-    // output
-    cout<<result;
     return 0;
-}",bit operation,hard,,,,,,,,,,,,,,,,
+}",bit operation,hard,
 leetcode36,"Given an integer array nums, return all the different possible non-decreasing subsequences of the given array with at least two elements. You may return the answer in any order.
 
 solution main function
@@ -6412,7 +6470,7 @@ int main(int argc, char *argv[])
         cout<<endl;
     }
     return 0;
-}",bit operation,middle,,,,,,,,,,,,,,,,
+}",bit operation,middle,
 leetcode37,"Given two integer arrays nums1 and nums2, return the maximum length of a subarray that appears in both arrays.
 
 solution main function
@@ -6608,7 +6666,7 @@ public:
         }
         return ret;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode38,"Given an integer n, return the number of strings of length n that consist only of vowels (a, e, i, o, u) and are lexicographically sorted，The answer is modulo 998224353.
 
 A string s is lexicographically sorted if for all valid i, s[i] is the same as or comes before s[i+1] in the alphabet.
@@ -6703,7 +6761,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode39,"You are given two identical eggs and you have access to a building with n floors labeled from 1 to n.
 You know that there exists a floor f where 0 <= f <= n such that any egg dropped at a floor higher than f will break, and any egg dropped at or below floor f will not break.
 In each move, you may take an unbroken egg and drop it from any floor x (where 1 <= x <= n). If the egg breaks, you can no longer use it. However, if the egg does not break, you may reuse it in future moves.
@@ -6800,7 +6858,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode40,"There are n friends that are playing a game. The friends are sitting in a circle and are numbered from 1 to n in clockwise order. More formally, moving clockwise from the ith friend brings you to the (i+1)th friend for 1 <= i < n, and moving clockwise from the nth friend brings you to the 1st friend.
 The rules of the game are as follows:
     Start at the 1st friend.
@@ -6908,7 +6966,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode41,"You are given an even integer n​​​​​​. You initially have a permutation perm of size n​​ where perm[i] == i​ (0-indexed)​​​​.
 In one operation, you will create a new array arr, and for each i:
     If i % 2 == 0, then arr[i] = perm[i / 2].
@@ -7019,7 +7077,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode42,"Given an integer n, return the number of structurally unique BST's (binary search trees) which has exactly n nodes of unique values from 1 to n.
 The answer is modulus 998244353.
 
@@ -7139,7 +7197,7 @@ public:
         }
         return (int)C;
     }
-};",,,,,,,,,,,,,,,
+};"
 leetcode43,"There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.
 Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
 The answer is modulus 998244353.
@@ -7249,7 +7307,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,hard,,,,,,,,,,,,,,,,
+}",math,hard,
 leetcode44,"Given an integer n, return the least number of perfect square numbers that sum to n.
 A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.
 
@@ -7364,7 +7422,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,hard,,,,,,,,,,,,,,,,
+}",math,hard,
 leetcode45,"There exists an infinitely large two-dimensional grid of uncolored unit cells. You are given a positive integer n, indicating that you must do the following routine for n minutes:
     At the first minute, color any arbitrary unit cell blue.
     Every minute thereafter, color blue every uncolored cell that touches a blue cell
@@ -7459,7 +7517,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode46,"Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.
 Return the maximum product you can get.
 The answer is modulus 998244353
@@ -7572,7 +7630,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,hard,,,,,,,,,,,,,,,,
+}",math,hard,
 leetcode47,"The factorial of a positive integer n is the product of all positive integers less than or equal to n.
     For example, factorial(10) = 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1.
 We make a clumsy factorial using the integers in decreasing order by swapping out the multiply operations for a fixed rotation of operations with multiply '*', divide '/', add '+', and subtract '-' in this order.
@@ -7687,7 +7745,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode48,"There is only one character 'A' on the screen of a notepad. You can perform one of two operations on this notepad for each step:
     Copy All: You can copy all the characters present on the screen (a partial copy is not allowed).
     Paste: You can paste the characters which are copied last time.
@@ -7792,7 +7850,7 @@ int main(int argc, char *argv[])
     // output
     cout<<result;
     return 0;
-}",math,middle,,,,,,,,,,,,,,,,
+}",math,middle,
 leetcode49,"The chess knight has a unique movement, it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically (with both forming the shape of an L). The possible movements of chess knight are shown in this diagram:
 We have a chess knight and a phone pad as shown below, the knight can only stand on a numeric cell (i.e. blue cell).
 1 2 3
@@ -7980,131 +8038,4 @@ public:
 
         return ret;
     }
-};",,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,
+};"
