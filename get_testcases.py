@@ -1,7 +1,6 @@
 import os
 import json
 import subprocess
-import sys
 
 def generate_test_cases(selected_problems=None):
     """
@@ -10,25 +9,21 @@ def generate_test_cases(selected_problems=None):
     :param selected_problems: List of problem IDs to process. If None, process all problems.
     """
     data_dir = "data"
-    test_dir = "test"
-
-    # 确保目标测试文件夹存在
-    os.makedirs(test_dir, exist_ok=True)
 
     for problem_id in os.listdir(data_dir):
-        # 如果传入了特定问题集，则跳过不在列表中的问题
+        # 如果指定了问题列表，跳过未列出的问题
         if selected_problems and problem_id != selected_problems:
             continue
-        # print(problem_id)
 
         problem_path = os.path.join(data_dir, problem_id)
         generate_path = os.path.join(problem_path, "generate")
+        testcase_dir = os.path.join(problem_path, "testcase")
         generator_cpp_path = os.path.join(generate_path, "generator.cpp")
         test_json_path = os.path.join(generate_path, "test.json")
 
-        # 检查必要的文件是否存在
+        # 检查必要文件是否存在
         if not os.path.isfile(generator_cpp_path) or not os.path.isfile(test_json_path):
-            print(f"Skipping {problem_id}: generator.cpp or test.json not found.")
+            print(f"Skipping {problem_id}: Required files not found in 'generate'.")
             continue
 
         # 读取 test.json
@@ -39,43 +34,46 @@ def generate_test_cases(selected_problems=None):
                 print(f"Error reading test.json for {problem_id}: {e}")
                 continue
 
-        # 创建对应的测试文件夹
-        problem_test_dir = os.path.join(test_dir, problem_id)
-        os.makedirs(problem_test_dir, exist_ok=True)
+        # 编译 generator.cpp
+        generator_exe_path = os.path.join(generate_path, "generator")
+        compile_cmd = ["g++", generator_cpp_path, "-o", generator_exe_path]
+        try:
+            subprocess.run(compile_cmd, check=True)
+            print(f"Compiled generator.cpp for {problem_id}.")
+        except subprocess.CalledProcessError as e:
+            print(f"Compilation failed for {problem_id}: {e}")
+            continue
 
-        # 获取参数 N 并为每个 N 创建文件夹
+        # 遍历 test.json 中的测试用例
         for idx, item in enumerate(test_data):
-            n_value = item.get("N")
+            level_id = idx + 1  # 根据索引生成 level_id (从 1 开始)
+            n_value = item.get("N")  # 从 test.json 获取 N 的值
             if n_value is None:
                 print(f"Skipping {problem_id} test case {idx}: 'N' not found.")
                 continue
 
-            n_test_dir = os.path.join(problem_test_dir, str(idx))
-            os.makedirs(n_test_dir, exist_ok=True)
-
-            # 编译 generator.cpp
-            generator_exe_path = os.path.join(generate_path, "generator")
-            compile_cmd = ["g++", generator_cpp_path, "-o", generator_exe_path]
-            try:
-                subprocess.run(compile_cmd, check=True)
-            except subprocess.CalledProcessError as e:
-                print(f"Compilation failed for {problem_id}: {e}")
-                continue
+            # 创建 level_id 对应的目录
+            level_dir = os.path.join(testcase_dir, f"level_id={level_id}")
+            os.makedirs(level_dir, exist_ok=True)
 
             # 生成测试点
-            test_case_count = 5  # 设置为每个 N 生成的测试点数
+            test_case_count = 5  # 每个 level_id 生成的测试点数
             for test_idx in range(test_case_count):
-                input_file_path = os.path.join(n_test_dir, f"{test_idx}.in")
+                input_file_path = os.path.join(level_dir, f"{test_idx}.in")
                 try:
                     with open(input_file_path, "w", encoding="utf-8") as input_file:
-                        # 使用 generator 生成测试点
+                        # 调用生成器生成测试点
                         run_cmd = [generator_exe_path, str(n_value)]
                         subprocess.run(run_cmd, stdout=input_file, check=True)
+                    print(f"Generated test case {test_idx} for {problem_id}, level_id={level_id}, N={n_value}.")
                 except subprocess.CalledProcessError as e:
-                    print(f"Error generating test case {test_idx} for {problem_id}, N={n_value}: {e}")
+                    print(f"Error generating test case {test_idx} for {problem_id}, level_id={level_id}, N={n_value}: {e}")
                 except IOError as e:
-                    print(f"Error writing test case {test_idx} for {problem_id}, N={n_value}: {e}")
+                    print(f"Error writing test case {test_idx} for {problem_id}, level_id={level_id}, N={n_value}: {e}")
 
 if __name__ == "__main__":
-    generate_test_cases('luogu13')
-    # generate_test_cases()
+    # 示例用法：处理所有问题
+    generate_test_cases()
+
+    # 示例用法：仅处理指定问题
+    # generate_test_cases(selected_problems=["problem1", "problem2"])
